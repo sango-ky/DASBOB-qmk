@@ -4,6 +4,7 @@ enum dasbob_layers {
   _QWERTY,
   _LOWER,
   _RAISE
+  _COLMAK
 };
 
 
@@ -43,6 +44,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LEFT,  RALT_T(KC_DOWN), LCTL_T(KC_RGHT), LSFT_T(XXXXXXX), KC_LGUI,             XXXXXXX,      LSFT_T(KC_KP_4),  LCTL_T(KC_KP_5), RALT_T(KC_KP_6),   KC_KP_PLUS,
         KC_MPRV,  KC_MSTP,         KC_MPLY,         KC_MNXT,         KC_PSCR,             XXXXXXX,      KC_KP_1,          KC_KP_2,         KC_KP_3,           KC_KP_0,
                                    KC_TRNS,         KC_TRNS,         KC_TAB,              KC_ENT,       KC_TRNS,          KC_TRNS
+    ),
+/* colmak */
+    [_COLMAK] = LAYOUT_split_3x5_3(
+        KC_Q,    KC_W,              KC_F,            KC_P,            KC_B,               KC_J,         KC_L,              KC_U,              KC_Y,           KC_MINS,
+        KC_A,    RALT_T(KC_R),      LCTL_T(KC_S),    LSFT_T(KC_T),    KC_G,               KC_M,         LSFT_T(KC_N),      LCTL_T(KC_E),      RALT_T(KC_I),   KC_O,
+        KC_X,    KC_C,              KC_D,            KC_V,            KC_Z,               KC_K,         KC_H,              KC_COMM,           KC_DOT,         KC_SLSH,
+                                    KC_DEL,          KC_SPC,          KC_TAB,              KC_ENT,        KC_BSPC,           KC_DEL
     ),
 
 
